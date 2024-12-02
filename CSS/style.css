@@ -5,10 +5,12 @@
     padding: 0;
     box-sizing: border-box;
     list-style: none;
+    text-decoration: none;
 }
 
 body {
     background-color: #f6f5f3;
+    font-family: Montserrat, Helvetica, sans-serif;
 }
 
 
@@ -19,8 +21,15 @@ body {
 
 /* header section */
 header {
-    height: 80px;
+    height: 60px;
     background-color: white;
+}
+
+header h1 {
+    font-family: 'Nerko One', sans-serif;
+    font-size: 45px;
+    color: #ff9614;
+    text-align: center;
 }
 
 
@@ -29,24 +38,34 @@ header {
 
 /* main section */
 .main-container {
-    width: 80%;
+    width: 90%;
     margin: 30px auto;
 }
 
 
-/* info-recipe section */
-.recipe-info h4 {
+
+
+/* recipe info section */
+#category {
     margin-top: 20px;
     margin-bottom: 10px;
+
+    color: rgb(194, 194, 194);
+    font-weight: 500;
 }
 
 .recipe-info h2 {
     margin-bottom: 20px;
+    font-size: 25px;
 }
 
-#video-recipe {
-    max-width: 100%;
+#subtitle {
+    display: none;
+}
 
+
+#video-recipe {
+    width: 100%;
 }
 
 #video-screen {
@@ -54,14 +73,80 @@ header {
 }
 
 
+#info-block {
+    background-color: white;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+#info-block h4 {
+    padding: 30px 20px;
+    font-size: 20px;
+}
+
+#info-block ul {
+    padding-left: 20px;
+    padding-bottom: 30px;
+}
+
+#info-block ul li {
+    font-size: 15px;
+    padding: 10px 0;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+
+
+
+
+
+
+
 /* social icons */
 #icon-container {
     max-width: 100%;
+    margin: 40px 0;
 }
 
 #icon-container ul {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.icon-button {
+    background-color: white;
+    padding: 10px;
+    border-radius: 30px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+
+}
+
+.icon-text {
+    display: none;
+}
+
+
+.fa-youtube {
+    color: red;
+}
+
+.fa-pinterest {
+    color: rgb(196, 54, 54);
+}
+
+.fa-instagram {
+    color: violet;
+}
+
+.fa-twitter {
+    color: rgb(0, 162, 255);
+}
+
+.fa-facebook {
+    color: blue;
 }
 
 
@@ -75,9 +160,15 @@ header {
 
 
 /* presentation */
+
+#presentation h2 {
+    font-size: 30px;
+    font-weight: 500;
+}
 #break {
-    width: 15%;
-    border-bottom: 2px solid rgb(233, 214, 41);
+    width: 30%;
+    margin-top: 15px;
+    border-bottom: 2px solid #ff9614;
 }
 
 #description {
@@ -88,7 +179,13 @@ header {
 #cover-img {
     display: block;
     max-width: 60%;
-    margin: 30px auto;
+    padding-top: 20px;
+    margin: 10px auto;
+}
+
+#description {
+    line-height: 200%;
+    font-size: 16px;
 }
 
 
@@ -98,16 +195,144 @@ footer {
     background-color: #7c69a4;
 }
 
+#footer-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 #footer-1 {
     color: white;
-    width: 70%;
+    width: 90%;
+    padding: 15px;
+    font-size: 12px;
+    text-align: center;
+
+}
+
+#footer-2 {
+    font-size: 11px;
+    text-align: center;
+    width: 90%;
+    padding-bottom: 20px;
 }
 
 #footer-2 ul {
     display: flex;
-    width: 70%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+
 }
 
 #footer-2 ul li a {
     color: white;
+    padding: 0 20px;
+    text-decoration: underline;
 }
+
+
+
+
+/* ***************** */
+/* MEDIA QUERY */
+/* ***************** */
+
+
+@media screen and (min-width: 768px) {
+
+    header h1 {
+        text-align: left;
+        padding-left: 20px;
+    }
+
+    #subtitle {
+        display: inline;
+    }
+    
+    #info-block ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding-left: 20px;
+        padding-bottom: 30px;
+    }
+
+    #info-block ul li {
+        padding-right: 50px;
+    }
+    
+    .icon-button {
+        background-color: white;
+        padding: 10px 50px;
+        border-radius: 30px;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+
+    }
+
+    .fa-brands {
+        text-align: center;
+    }
+    
+    #cover-img {
+        float: left;
+        display: block;
+        max-width: 60%;
+        padding: 0;
+        margin: 0;
+        margin-right: 10px;
+    }
+
+    #description {
+        margin-top: 20px;
+        margin-left: 10px;
+    }
+    
+}
+
+
+
+
+
+
+
+/* desktop version */
+
+@media screen and (min-width: 992px) {
+    #recipe-info-container {
+        display: flex;
+    }
+
+    #info-block ul {
+        padding-left: 20px;
+        padding-bottom: 30px;
+    }
+
+    .icon-text {
+        padding-left: 5px;
+        display: inline;
+    }
+
+    #video-recipe {
+        width: 70%;
+    }
+    #info-block {
+        width: 30%;
+    }
+
+    #video-screen {
+        max-width: 100%;
+    }
+
+
+    #footer-container {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+    
+
+
+
+
+
