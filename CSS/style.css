@@ -121,7 +121,6 @@ header h1 {
     padding: 10px;
     border-radius: 30px;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
-
 }
 
 .icon-text {
@@ -207,7 +206,6 @@ footer {
     padding: 15px;
     font-size: 12px;
     text-align: center;
-
 }
 
 #footer-2 {
@@ -222,7 +220,6 @@ footer {
     justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 20px;
-
 }
 
 #footer-2 ul li a {
@@ -240,6 +237,10 @@ footer {
 
 
 @media screen and (min-width: 768px) {
+
+    .main-container {
+        width: 80%;
+    }
 
     header h1 {
         text-align: left;
@@ -287,7 +288,16 @@ footer {
         margin-top: 20px;
         margin-left: 10px;
     }
+
+    #footer-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+    }
+
     
+
 }
 
 
@@ -299,6 +309,12 @@ footer {
 /* desktop version */
 
 @media screen and (min-width: 992px) {
+
+    .main-container {
+        width: 60%;
+    }
+
+
     #recipe-info-container {
         display: flex;
     }
@@ -306,6 +322,10 @@ footer {
     #info-block ul {
         padding-left: 20px;
         padding-bottom: 30px;
+    }
+
+    .icon-button {
+        padding: 10px;
     }
 
     .icon-text {
@@ -328,6 +348,26 @@ footer {
     #footer-container {
         display: flex;
         justify-content: space-between;
+    }
+
+    #footer-1 {
+        width: 90%;
+        padding: 15px;
+        font-size: 12px;
+        text-align: left;
+    }
+
+    #footer-2 {
+        text-align: center;
+        width: 60%;
+        padding-bottom: 0px;
+    }
+    
+    #footer-2 ul {
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        gap: 20px;
     }
 }
     
